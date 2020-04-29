@@ -4,12 +4,28 @@
 import React from 'react' 
 import { render } from 'react-dom'
 import Saludar from  './saludar'
+import Loading from  './Loading'
+import Link from './Link'
+import Contenedor from './contenedor'
 
+import Navbar from './nabvar'
+import Table from './table'
+import Jumbotron from './jumbotron'
 
-render(<React.Fragment> 
-    {[1,2,3].map((num)=>{
-         return (<Saludar num={num}/>)
+render(<div> 
+    {/*[1,2,3].map((num)=>{
+         return (<Link key={num} url={num} urlImage={2}></Link>)
     })}
-    </React.Fragment>,
+    <Loading></Loading>
+    <br/>
+    <br/>
+    <br/>
+    <Contenedor></Contenedor>
+*/}
+<Navbar></Navbar>
+<Table></Table>
+<Jumbotron></Jumbotron>
+</div>
+,
     document.getElementById("root")
 )

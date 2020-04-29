@@ -1,18 +1,18 @@
 import React,{Component} from 'react'
 
-export default class Saludar extends Component{
+export default class Image extends Component{
         constructor(props){
             super(props);
+            
+            console.log("Desde Image")
+            console.log(props)
         }
 
     render(){
         //Cuando llamemos esta Clase, va a ejecutar el metodo render para RENDERIZAR.
         return (
             <React.Fragment>
-                {
-                    this.props.num
-                }
-               <p>Hola Mundo</p>
+              <img src={this.props.urlImage}></img>
             </React.Fragment>
         )
     }
