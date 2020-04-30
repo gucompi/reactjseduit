@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link, NavLink} from 'react-router-dom'
 
 export default class Navbar extends Component {
   render() {
@@ -12,21 +13,26 @@ export default class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+              <li className="nav-item ">
+                <NavLink className="nav-link " exact activeStyle={{fontWeight: 'bold',color: 'red'}} to="/">
+                  Home 
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Table</a>
+                  <NavLink className="nav-link"  activeStyle={{fontWeight: 'bold',color: 'red'}} to="/table/33">
+                    Table
+                  </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
+                  Ropa
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Action</a>
-                  <a className="dropdown-item" href="#">Another action</a>
+                  <NavLink className="dropdown-item" to="/ropa/niños" activeStyle={{fontWeight: 'bold',color: 'red'}}>Niños</NavLink>
+                  <NavLink className="dropdown-item" to="/ropa/jovenes" activeStyle={{fontWeight: 'bold',color: 'red'}}>Jovenes</NavLink>
+                  
                   <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">Something else here</a>
+                  <NavLink className="dropdown-item" to="/ropa">Todos</NavLink>
                 </div>
               </li>
               <li className="nav-item">

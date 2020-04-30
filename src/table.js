@@ -5,7 +5,7 @@ export default class Table extends Component {
         //Cuando llamemos esta Clase, va a ejecutar el metodo render para RENDERIZAR.
         return (
             <React.Fragment>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
