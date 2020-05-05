@@ -13,8 +13,14 @@ import Navbar from './nabvar'
 import Table from './table'
 import Jumbotron from './jumbotron'
 import Ropa from './ropa'
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import personaReducer from './personaReducer'
+import Form from './form'
 
-render(<div> 
+let store = createStore(personaReducer)
+
+render(<Provider store={store}><div> 
     {/*
         [1,2,3].map((num)=>{
             return (<Link key={num} url={num} urlImage={2}></Link>)
@@ -32,6 +38,7 @@ render(<div>
         <Switch>
             <Route exact path="/" component={Jumbotron}></Route>
             <Route path="/table" component={Table}></Route>
+            <Route path="/form" component={Form}></Route>
             <Route path="/ropa/:tipo?/:talle?" component={Ropa}></Route>
         </Switch>
 
@@ -39,6 +46,7 @@ render(<div>
         
     </Router>
 </div>
+</Provider>
 ,
     document.getElementById("root")
 )

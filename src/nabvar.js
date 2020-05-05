@@ -23,6 +23,11 @@ export default class Navbar extends Component {
                     Table
                   </NavLink>
               </li>
+              <li className="nav-item">
+                  <NavLink className="nav-link"  activeStyle={{fontWeight: 'bold',color: 'red'}} to="/form">
+                    Form
+                  </NavLink>
+              </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Ropa
